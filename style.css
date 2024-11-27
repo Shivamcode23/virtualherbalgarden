@@ -1,0 +1,188 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100%;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:none; /* Semi-transparent background */
+    padding: 15px 20px; /* Adjust padding as needed */
+    position: fixed; /* Change to fixed */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Keep navbar on top */
+}
+
+/* Logo styles - aligned to the left */
+.navbar .logo {
+    margin-left: auto; /* Align logo to the left */
+    font-size: 22px;
+    font-weight: bold;
+    color: white; /* Optional: Adjust logo color */
+}
+
+/* Adjusted styles for horizontal navbar - aligned to the right */
+.navbar ul {
+    display: flex; /* Use flexbox for horizontal layout */
+    list-style-type: none;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+    align-items: flex-end; /* Center items vertically */
+    margin-left: auto; /* Push the navbar items to the right */
+}
+
+/* Each list item */
+.navbar li {
+    margin-right: 20px; /* Add spacing between buttons */
+}
+
+.navbar li:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+}
+
+/* Navbar button styles */
+.nav-button {
+    padding: 1.3em 3em; /* Updated padding */
+    font-size: 12px; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2.5px; /* Letter spacing */
+    font-weight: 500; /* Font weight */
+    color: #000; /* Text color */
+    background-color: #fff; /* Background color */
+    border: none; /* No border */
+    border-radius: 45px; /* Rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: all 0.3s ease 0s; /* Transition for effects */
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none; /* Remove outline */
+    position: relative; /* Maintain position for pseudo-element */
+    z-index: 30; /* Ensure the button is on top */
+}
+
+/* Hover effects */
+.nav-button:hover {
+    background-color: rgb(219, 157, 219); /* Change background color on hover */
+    box-shadow: 0px 15px 20pxrgb(219, 157, 219); /* Shadow effect */
+    color: #fff; /* Change text color on hover */
+    transform: translateY(-7px); /* Move button up on hover */
+}
+
+/* Active state */
+.nav-button:active {
+    transform: translateY(-1px); /* Slightly move button down on click */
+}
+
+/* Mobile Menu Toggle */
+.toggle-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-menu span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px;
+    border-radius: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        text-align: center;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .toggle-menu {
+        display: flex;
+    }
+}
+
+
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: none; /* Light background for better visibility */
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 10px;
+    border: 2px solid plum; /* Solid border */
+    width: 350px; /* Adjusted width for better alignment */
+    box-shadow: 0 4px 20px plum; /* Optional shadow for depth */
+    text-align: center; /* Center text alignment */
+}
+
+/* Input field styling */
+.input {
+    width: 100%; /* Full width for input fields */
+    min-height: 45px; /* Minimum height for input fields */
+    color: #fff;
+    outline: none;
+    transition: 0.35s;
+    padding: 10px; /* Padding for input fields */
+    margin: 10px 0; /* Equal spacing between text and input fields */
+    background-color:lavenderblush;
+    border-radius: 6px;
+    border: 2px solid #212121;
+    box-shadow: 6px 6px 10px plum, 1px 1px 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 35px;
+    cursor: pointer;
+    background-color: plum;
+    border-radius: 6px;
+    border: 2px solid #212121;
+    box-shadow: 6px 6px 10px plum, 1px 1px 10px rgba(255, 255, 255, 0.6);
+    color: rgb(219, 157, 219);
+    font-size: 18px; /* Increased font size */
+    font-weight: bold; /* Bold font */
+    transition: 0.5s;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: rgb(219, 157, 219); /* Change background color on hover */
+    color: rgb(219, 157, 219); /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 8px 15px rgb(219, 157, 219); /* Shadow effect on hover */
+}
+
+
+
+
+.logo-left {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 150px;
+}
+
+#canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the 3D model in the background */
+}
+
+
+
+
+
+

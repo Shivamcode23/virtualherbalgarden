@@ -1,0 +1,401 @@
+/* Basic styles for the page */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden; /* Allow vertical scrolling */
+}
+
+/* Video background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send video behind all content */
+    object-fit: cover; /* Ensures the video covers the screen without distortion */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(76, 175, 80, 0.8); /* Semi-transparent background */
+    padding: 15px 20px; /* Adjust padding as needed */
+    position: sticky;
+    top: 0;
+    /* Align to the left */
+    z-index: 1000;
+}
+
+/* Logo styles */
+.navbar .logo {
+    margin-right: 30px; /* Space between logo and navbar items */
+    font-size: 22px;
+    font-weight: bold;
+    color: white; /* Optional: Adjust logo color */
+}
+
+/* Adjusted styles for horizontal navbar */
+.navbar ul {
+    display: flex; /* Use flexbox for horizontal layout */
+    list-style-type: none;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+    align-items: flex-end; /* Center items vertically */
+}
+
+/* Each list item */
+.navbar li {
+    margin-right: 20px; /* Add spacing between buttons */
+}
+
+.navbar li:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+}
+
+/* Navbar button styles */
+.nav-button {
+    padding: 1.3em 3em; /* Updated padding */
+    font-size: 12px; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2.5px; /* Letter spacing */
+    font-weight: 500; /* Font weight */
+    color: #000; /* Text color */
+    background-color: #fff; /* Background color */
+    border: none; /* No border */
+    border-radius: 45px; /* Rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: all 0.3s ease 0s; /* Transition for effects */
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none; /* Remove outline */
+    position: relative; /* Maintain position for pseudo-element */
+    z-index: 30; /* Ensure the button is on top */
+}
+
+/* Hover effects */
+.nav-button:hover {
+    background-color: #23c483; /* Change background color on hover */
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4); /* Shadow effect */
+    color: #fff; /* Change text color on hover */
+    transform: translateY(-7px); /* Move button up on hover */
+}
+
+/* Active state */
+.nav-button:active {
+    transform: translateY(-1px); /* Slightly move button down on click */
+}
+
+/* Additional styles to ensure the navbar is positioned correctly */
+body {
+    margin: 0; /* Remove default margin */
+}
+
+
+/* Mobile Menu Toggle */
+.toggle-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-menu span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        text-align: center;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .toggle-menu {
+        display: flex;
+    }
+}
+
+/* Main Content Styles */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    padding: 50px 20px;
+    color: white;
+    margin-top: 100px; /* Creates space below the navbar */
+    min-height: 100vh; /* Ensures the content fills the full screen */
+}
+
+.content h1 {
+    font-size: 48px;
+}
+.content p {
+    font-size: 18px;
+}
+
+/* Ministry of AYUSH Section Styles */
+/* Ministry of AYUSH Section Styles */
+.ministry-container {
+    background-color: none; /* Light background for contrast */
+    color: #ffffff; /* Dark text for readability */
+    padding: 40px; /* Padding for spacing */
+    margin-top: 30px; /* Space above the container */
+    text-align: center; /* Center align the text */
+}
+
+.ministry-container h2 {
+    font-size: 36px; /* Increase the font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+.ministry-container p {
+    font-size: 16px; /* Adjusted font size for paragraphs */
+    margin-bottom: 20px; /* Space below each paragraph */
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+    display: flex;
+    justify-content: center; /* Center images */
+    gap: 20px; /* Space between images */
+    margin-top: 20px; /* Space between the paragraph and images */
+}
+
+.image-gallery img {
+    width: 1.5in; /* Set width to 1.5 inches */
+    height: 1.5in; /* Set height to 1.5 inches */
+    border-radius: 8px; /* Optional: Slight rounding of image corners */
+    object-fit: cover; /* Ensure image covers the space */
+}
+/* Ministry of AYUSH Section */
+.ministry-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+    padding: 40px; /* Padding for spacing */
+    margin-top: 30px; /* Space above the container */
+    text-align: center; /* Center align the text */
+}
+
+.ministry-container h2 {
+    font-size: 36px; /* Increase the font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.ministry-container p {
+    font-size: 16px; /* Adjusted font size for paragraphs */
+    margin-bottom: 20px; /* Space below each paragraph */
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+    display: flex;
+    justify-content: center; /* Center images */
+    gap: 20px; /* Space between images */
+    margin-top: 20px; /* Space between the paragraph and images */
+}
+
+.image-gallery img {
+    width: 1.5in; /* Set width to 1.5 inches */
+    height: 1.5in; /* Set height to 1.5 inches */
+    border-radius: 8px; /* Optional: Slight rounding of image corners */
+    object-fit: cover; /* Ensure image covers the space */
+}
+/* Card Styling */
+.card {
+    display: flex; /* Use flexbox to arrange image and text side by side */
+    background-color: rgba(185, 243, 187, 0.8)rgba(76, 175, 80, 0.8); /* Updated card background color */
+    border: 1px solid #ddd; /* Border for the card */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevents image overflow */
+    margin: 20px 4in 30px 1in; /* Leave 1 inch space on left, 3 inches on right, 30px space below */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a lifted effect */
+    margin-bottom: 1.4in; /* Add 2 inches space below each card */
+}
+/* Image Styling */
+.card-image {
+    width: 1.8in; /* Set image width to 1.8 inches */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+}
+
+/* Text Content Styling */
+.card-content {
+    padding: 20px; /* Space inside the text content area */
+    width: calc(100% - 1.8in); /* Text takes up the remaining width */
+    display: flex; /* Allows flexible alignment */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.card-heading {
+    text-align: center; /* Center align the heading */
+    font-size: 24px; /* Heading size */
+    margin: 0 0 10px; /* Space below heading */
+}
+
+.card-content p {
+    margin: 0 0 10px; /* Space below each paragraph */
+    font-size: 16px; /* Font size for paragraphs */
+}
+/* Unani Card Styling */
+/* Card Styling */
+.card {
+    display: flex; /* Use flexbox to arrange image and text side by side */
+    background-color: rgba(185, 243, 187, 0.8); /* Updated card background color */
+    border: 1px solid #ddd; /* Border for the card */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevents image overflow */
+    margin: 20px 1in 30px 4in; /* Leave 1 inch space on left, 3 inches on right, 30px space below */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a lifted effect */
+    margin-bottom: 1.4in; /* Add 2 inches space below each card */
+}
+/* Unani Card Specific Styles */
+.unani {
+    margin-left: 4in; /* Leave 4 inches from the left */
+    margin-right: 1in; /* Leave 1 inch from the right */
+}
+
+/* Image Styling */
+.card-image {
+    width: 1.8in; /* Set image width to 1.8 inches */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+}
+
+/* Text Content Styling */
+.card-content {
+    padding: 20px; /* Space inside the text content area */
+    width: calc(100% - 1.8in); /* Text takes up the remaining width */
+    display: flex; /* Allows flexible alignment */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Unani Card Specific Styling */
+.card.unani {
+    flex-direction: row; /* Keep the default row direction */
+}
+
+/* Align image to the right */
+.card.unani .card-image {
+    order: 1; /* Set image order to 1 to move it to the right */
+}
+
+/* Align text to the left */
+.card.unani .card-content {
+    order: 0; /* Set content order to 0 to keep it on the left */
+}
+
+/* Heading Styling */
+.card-heading {
+    text-align: center; /* Center align the heading */
+    font-size: 24px; /* Heading size */
+    margin: 0 0 10px; /* Space below heading */
+}
+
+.card-content p {
+    margin: 0 0 10px; /* Space below each paragraph */
+    font-size: 16px; /* Font size for paragraphs */
+}
+.card {
+    display: flex; /* Use flexbox to arrange image and text side by side */
+    background-color: rgba(76, 175, 80, 0.8); /* Default card background color */
+    border: 1px solid #ddd; /* Border for the card */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevents image overflow */
+    margin: 20px 3in 30px 1in; /* Leave 1 inch space on left, 3 inches on right, 30px space below */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a lifted effect */
+    margin-bottom: 1.4in; /* Add 2 inches space below each card */
+}
+
+/* Specific styles for Yoga Card */
+
+.card-image {
+    width: 1.8in; /* Set image size */
+    height: auto; /* Maintain aspect ratio */
+}
+.card.yoga {
+    background-color: rgba(76, 175, 80, 0.8) /* Background color for Yoga card */
+   
+}
+.card.yoga {
+    flex-direction: row; /* Keep the default row direction */
+}
+
+/* Align image to the right */
+.card.yoga .card-image {
+    order: 1; /* Set image order to 1 to move it to the right */
+}
+/* Homeopathy Card */
+.card.homeopathy {
+    display: flex;
+    background-color: rgba(76, 175, 80, 0.8); /* Similar background to other cards */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 4in 30px 1.5; /* Leave 1 inch space from right, 4 inches from left */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2in;
+    flex-direction: row; /* Ensure image comes first (on the left) */
+}
+/* Existing styles */
+
+/* Existing styles */
+
+/* 3D Model Section */
+.three-d-garden {
+    margin-top: 3in; /* 3 inches space from Homeopathy card */
+    text-align: center;
+}
+
+.three-d-garden h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.model-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1in; /* 1-inch padding on all sides */
+    width: fit-content;
+}
+
+.model-container iframe {
+    width: 800px; /* Adjust width as needed */
+    height: 600px; /* Adjust height as needed */
+    border: none; /* Remove iframe border */
+}
+
+/* Canvas container for 3D model */
+#canvas-container {
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+}
+
+/* Footer styles */
+footer {
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: 20px; /* Adds spacing before the footer */
+    text-decoration: whitesmoke;
+}
+.navbar{
+    text-decoration: none;
+}

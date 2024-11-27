@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Herbal Garden - Register</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <style>
+        /* Ensures text inside input fields is black */
+        input {
+            color: black !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="canvas-container"></div>
+
+    <!-- Navbar -->
+    <!-- <nav class="navbar">
+        <div class="logo-left">Virtual Herbal Garden</div>
+        <div class="toggle-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a class="nav-button" href="../home.html">Home</a></li>
+            <li><a class="nav-button" href="plant%20info/plantinfo.html">Plant Info</a></li>
+            <li><a class="nav-button" href="3dmodels.html">3D Models</a></li>
+            <li><a class="nav-button" href="virtualtours.html">Virtual Tours</a></li>
+            <li><a class="nav-button" href="../index.html">Login/Signup</a></li>
+        </ul>
+    </nav> -->
+
+    <!-- Form Section -->
+    <div class="form-container">
+        <h1>Register</h1>
+        <form id="registerForm">
+            <div>
+                <label for="name">Name:</label>
+                <input id="name" type="text" class="input" placeholder="Enter Name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input id="email" class="input" placeholder="Enter Email Id" type="email" name="email" pattern=".+@(gmail\.com|.+\.in)$" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input id="password" type="password" class="input" placeholder="Enter Password" required>
+            </div>
+            <button type="submit">Submit</button>
+            <div class="create-account">
+                <small>Already have an account?</small>
+                <a href="index.html">Login</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- JavaScript for form submission -->
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const data = { name, email, password };
+
+            try {
+                const response = await fetch("http://localhost:4512/api/authUser/createuser", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    alert("Registration successful!");
+                    console.log(response);
+                    window.location.href = "home.html"; // Redirect to login page after successful registration
+                } else {
+                    const errorData = await response.json();
+                    alert("Registration failed: " + errorData.message);
+                }
+            } catch (error) {
+                alert("An error occurred: " + error.message);
+            }
+        });
+    </script>
+
+    <!-- Add your JavaScript code for 3D model rendering -->
+    <script src="scriptlavender.js"></script>
+</body>
+</html>

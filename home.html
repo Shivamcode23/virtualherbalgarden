@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Herbal Garden</title>
+    <link rel="stylesheet" href="homes.css">
+</head>
+<body>
+
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="3976534-uhd_3840_2160_24fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Navbar -->
+   <!-- Navbar -->
+   <nav class="navbar">
+    <div class="logo">Virtual Herbal Garden</div>
+    <ul>
+        <li><a class="nav-button" href="home.html">Home</a></li>
+        <li><a class="nav-button" href="plant%20info/plantinfo.html">Plant Info</a></li>
+        <li><a class="nav-button" href="plant%20info/virtual%20tours/virtual.html">Virtual Tours</a></li>
+        <li><a class="nav-button" href="index.html" target="_blank">Log Out</a></li> <!-- Link to index.html -->
+    </ul>
+</nav>
+    <!-- Main Content (Placeholder) -->
+    <div class="content">
+        <h1>Welcome to the Virtual Herbal Garden</h1>
+        <p>Explore the medicinal plants, 3D models, and take virtual tours.</p>
+        <p>
+            Welcome to the Virtual Herbal Garden! Explore a wide range of medicinal plants from different traditional systems like Ayurveda, Siddha, and more. Our platform offers immersive 3D models and virtual tours that bring these plants to life, allowing you to experience their details in ways like never before. Learn about the medicinal properties and uses of these plants, and embark on virtual tours that explore their rich history and modern applications. 
+            In addition, our platform provides valuable resources for those interested in herbal medicine, including articles on the latest research, health tips, and ways to incorporate these plants into daily wellness routines. Whether you are a student, a researcher, or simply someone curious about the healing power of nature, our Virtual Herbal Garden is designed to enlighten and inspire you.
+        </p>
+        
+    </div>
+    </div>
+    <div class="ministry-container">
+        <h2>Ministry of AYUSH</h2>
+        <p>The Ministry of AYUSH, established in 2014, focuses on promoting traditional Indian systems of medicine, including Ayurveda, Yoga, Unani, Siddha, and Homeopathy. 
+            With a vision to enhance the quality of life, it aims to integrate these traditional practices into the national healthcare system. 
+            The ministry actively works towards research, education, and policy-making to strengthen these systems, ensuring their relevance in modern healthcare. 
+            Looking ahead, the Ministry of AYUSH aspires to globalize these traditional practices, making them accessible to people worldwide while maintaining their authenticity and efficacy.</p>
+    </div>
+    <!-- Images Section -->
+    <div class="image-gallery">
+        <img src="ayurveda.jpeg" alt="Herbal Image 1">
+        <img src="homeo.jpg" alt="Herbal Image 2">
+        <img src="yoga.jpg" alt="Herbal Image 3">
+        <img src="unani.webp" alt="Herbal Image 4">
+    </div>
+    <div class="card">
+        <img src="ayurvedaaaa.png" alt="Ayurveda" class="card-image">
+        <div class="card-content">
+            <h2 class="card-heading">Ayurveda</h2> <!-- Added class for heading -->
+            <p>Ayurveda is one of the world’s oldest healing systems, developed more than 3,000 years ago in India. It focuses on balancing the body, mind, and spirit for overall well-being.</p>
+            <p>Herbal remedies, lifestyle changes, and diet adjustments are central to Ayurveda for achieving this balance.</p>
+            <p>Today, Ayurveda continues to thrive globally and is part of modern integrative healthcare.</p>
+        </div>
+    </div>
+<!-- Unani Card -->
+<div class="card unani">
+    <div class="card-content">
+        <h2 class="card-heading">Unani</h2>
+        <p>The Unani system of medicine has its origins in ancient Greece and was further developed in the Middle East and South Asia. It is based on the teachings of Hippocrates and Galen and incorporates the principles of four humors.</p>
+        <p>Unani emphasizes the importance of a balanced lifestyle, diet, and the use of herbal remedies. It focuses on the body's natural healing processes and offers treatments for various ailments.</p>
+    </div>
+    <img src="unani2.png" alt="Unani" class="card-image"> <!-- Replace with actual image path -->
+</div>
+<!-- Yoga Card -->
+<div class="card yoga">
+    <img src="yoga2.png" alt="Yoga" class="card-image"> <!-- Replace with actual image path -->
+    <div class="card-content">
+        <h2 class="card-heading">Yoga</h2>
+        <p>Yoga is an ancient practice that combines physical postures, breathing techniques, and meditation to promote holistic health. Originating in India over 5,000 years ago, yoga aims to unite the mind, body, and spirit.</p>
+        <p>Practicing yoga can enhance flexibility, strength, and mental clarity. It is widely recognized for its ability to reduce stress, improve concentration, and support overall well-being.</p>
+    </div>
+</div>
+<!-- Homeopathy Card -->
+<div class="card homeopathy">
+    <img src="homeopathy.jpeg" alt="Homeopathy" class="card-image"> <!-- Replace with actual image path -->
+    <div class="card-content">
+        <h2 class="card-heading">Homeopathy</h2>
+        <p>Homeopathy is a system of alternative medicine developed in the late 18th century by Samuel Hahnemann. It is based on the principle of "like cures like," where substances that cause symptoms in a healthy person are used in minute doses to treat similar symptoms in illness.</p>
+        <p>Homeopathy emphasizes individualized treatment and aims to stimulate the body's self-healing abilities. It is used for various chronic and acute conditions, including allergies, migraines, and stress-related issues.</p>
+    </div>
+</div>
+ <!-- Container for the 3D Model -->
+ <div id="canvas-container" style="width: 100%; height: 500px;"></div>
+
+ <!-- Include Three.js and OrbitControls -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+ <!-- Your custom script -->
+ <script src="script.js"></script>
+    
+    
+    <footer>
+        <p>Contact us at: <a href="shivproject15@gmail.com">shivproject15@gmail.com</a></p>
+    </footer>
+
+    <!-- <script>
+        // Toggle mobile menu
+        document.getElementById('toggle-menu').addEventListener('click', function () {
+            var navbarLinks = document.getElementById('navbar-links');
+            navbarLinks.classList.toggle('active');
+        });
+    </script> -->
+
+</body>
+</html>
